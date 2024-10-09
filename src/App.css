@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background-image: url('./assets/images/background.avif'); /* Update the path as needed */
+  background-size: cover;
+  background-position: center;
+  color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  min-height: 100vh;
+}
+
+.word-search {
+  background-color: rgba(255, 255, 255, 0.673); /* Semi-transparent white background */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Add other styles as needed */
+
+
+.App {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background-color: #dfdfdf;
+  color: #000000;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.word-search {
+  margin: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+.reset-button,
+.play-again-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.reset-button:hover,
+.play-again-button:hover {
+  background-color: #45a049;
+}
+
+.grid {
+  display: inline-block;
+  border: 2px solid #333;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #818181;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(219, 219, 219);
+  transition: background-color 0.3s ease;
+}
+
+.cell.selected {
+  background-color: rgb(239, 255, 162);
+}
+
+.cell.found {
+  background-color: rgb(168, 255, 168);
+}
+
+.word-list {
+  margin-top: 20px;
+}
+
+.word-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.word-list li {
+  font-size: 18px;
+}
+
+.word-list .found {
+  text-decoration: line-through;
+  color: rgb(0, 0, 0);
+}
+
+/* Popup Styles */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+.popup.active {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.popup-content {
+  background: linear-gradient(45deg, #f3ec78, #af4261);
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  animation: pulseBackground 1.5s infinite alternate;
+  max-width: 300px; /* Optional: Limit the width */
+}
+
+@keyframes pulseBackground {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* Celebration image style */
+.celebration-image {
+  max-width: 100%;
+  height: auto;
+  margin: 15px 0; /* Space above and below the image */
+}
+
+/* Difficulty Selector */
+.difficulty-selector {
+  margin: 20px 0;
+}
+
+.difficulty-selector select {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.word-list .tick {
+  color: rgb(0, 0, 0); /* Change color as needed */
+  margin-right: 5px; /* Space between tick and word */
+}
+
